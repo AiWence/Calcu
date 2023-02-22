@@ -1,0 +1,84 @@
+package AiraW;
+import java.util.Scanner;
+public class Main {
+
+	static Scanner scan = new Scanner(System.in);
+	
+		String choose = "";
+   
+	public static void add () {
+		
+		System.out.println("ADDITION");
+		System.out.print("Enter your first number: ");
+		int fn = scan.nextInt();
+		System.out.print("Enter your second number: ");
+		int sn = scan.nextInt();
+		System.out.println("Result: " + (fn+sn));
+		
+	}
+
+	public static void sub() {
+		
+		
+		System.out.println("SUBTRACTION");
+		System.out.print("Enter your first number: " );
+		int fn = scan.nextInt();
+		System.out.print("Enter your second number: ");
+		int sn = scan.nextInt();
+		System.out.println("Result: " + (fn-sn));
+		
+	}
+		public static void mul() {
+		
+			System.out.println("MULTIPLICATION");
+			System.out.print("Enter your first number: " );
+			int fn = scan.nextInt();
+			System.out.print("Enter your second number: ");
+			int sn = scan.nextInt();
+			System.out.println("Result: " + (fn*sn));
+	
+	}	
+		public static void div() {
+		
+		
+		System.out.println("DIVISION");
+		System.out.print("Enter your first number: " );
+		int fn = scan.nextInt();
+		System.out.print("Enter your second number: ");
+		int sn = scan.nextInt();
+		System.out.println("Result: " + (fn/sn));
+		
+	}
+		public static void main(String[] args) {
+		
+		
+		Main myobj = new Main();
+		
+		System.out.println("You choose an operation");
+		System.out.print(" A = Addition \n S = Subtraction \n M = Multiplication \n D = Division \n =");
+		myobj.choose = scan.nextLine();
+		
+		
+		if(myobj.choose.equalsIgnoreCase("A")) {
+			
+			add();
+		}
+		else if(myobj.choose.equalsIgnoreCase("S")) {
+			
+			sub();
+		}
+		else if(myobj.choose.equalsIgnoreCase("M")) {
+			
+			mul();
+		}
+		else if(myobj.choose.equalsIgnoreCase("D")) {	
+			
+			div();	
+		}else {
+			
+			System.out.println("Error");
+			
+		}
+	}
+
+}
